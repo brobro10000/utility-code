@@ -1,11 +1,12 @@
 const users = [
     ['Nicole', 31],
     ['Chris', 33],
+    ['Annabelle', 122],
     ['Yaatree', 2],
     ['Sanne', 29],
     ['Saane', 26]
 ];
-let userObject = Object.fromEntries(users);//?
+let userObject = Object.fromEntries(users);
 const singleUser = {
     'Nicole': [31, 56, 24, 67, 89],
     'Bobby': [2556, 54, 37, 289]
@@ -61,17 +62,17 @@ function objectStatistics(object, keyOrValue = 1, ascOrDesc = 1) {
                     a[0] < b[0] ? 1 : -1
             })), statistics: {
                 minVal: ascOrDesc ?
-                    object[object.length - 1][1] :
-                    object[0][1],
-                minKey: ascOrDesc ?
-                    object[object.length - 1][0] :
-                    object[0][0],
-                maxVal: ascOrDesc ?
                     object[0][1] :
                     object[object.length - 1][1],
-                maxKey: ascOrDesc ?
+                minKey: ascOrDesc ?
                     object[0][0] :
                     object[object.length - 1][0],
+                maxVal: ascOrDesc ?
+                    object[object.length - 1][1] :
+                    object[0][1],
+                maxKey: ascOrDesc ?
+                    object[object.length - 1][0] :
+                    object[0][0],
                 average: average(object, 0),
                 variance: variance(object, average(object, 0), 0),
                 standardDeviation: Math.sqrt(variance(object, average(object, 0), 0).underestimate),
@@ -111,15 +112,15 @@ function bellCurve(arrays, average, isArray = 1) {
 }
 
 // objectStatistics(userObject)//?
-// objectStatistics(users)//?
+// objectStatistics(users,0)//?
 // let data = objectStatistics(users, 0, 0)//?
 // data.statistics.minKey//?
 
 let data2 = objectStatistics(singleUser, 1, 0)//?
-data2//?
-for (var i in data2) {
-    data2[i]//?
-    for (var k in data2[i]) {
-        data2[i][k]//?
-    }
-}
+// data2//?
+// for (var i in data2) {
+//     data2[i]//?
+//     for (var k in data2[i]) {
+//         data2[i][k]//?
+//     }
+// }
