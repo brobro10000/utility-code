@@ -13,7 +13,7 @@ const singleUser = {
 }
 
 
-
+/** Object Expecting Array, keyOrValue by default Value @ 1, ascOrDesc by default Desc @ 1 */
 function objectStatistics(object, keyOrValue = 1, ascOrDesc = 1) {
     //validation of array of arrays, else create one from entries
     Array.isArray(object) && Array.isArray(object[0]) && object[0].length == 2 ? true : object = Object.entries(object);
@@ -56,7 +56,7 @@ function objectStatistics(object, keyOrValue = 1, ascOrDesc = 1) {
                     a[1] - b[1] :
                     b[1] - a[1];
             })) :
-            Object.fromEntries(object.sort((a, b) => {
+            Object.fromEntries(object.sort((a, b) => {e
                 return ascOrDesc ?
                     a[0] > b[0] ? 1 : -1 :
                     a[0] < b[0] ? 1 : -1
@@ -124,3 +124,4 @@ let data2 = objectStatistics(singleUser, 1, 0)//?
 //         data2[i][k]//?
 //     }
 // }
+singleUser.Bobby.forEach()
