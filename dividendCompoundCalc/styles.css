@@ -1,0 +1,90 @@
+/* Define table class */
+.table {
+  width: 100%;
+  /* Use the full width of the parent container */
+  border-collapse: collapse;
+  /* Collapse borders */
+}
+
+/* Table header styles */
+.table th {
+  background-color: #1C6EA4;
+  /* Dark blue */
+  color: white;
+  /* White text */
+  padding: 15px;
+  /* Padding around text */
+  border: 1px solid #AAAAAA;
+  /* Gray border */
+}
+
+/* Table data/row styles */
+.table td {
+  padding: 15px;
+  /* Padding around text */
+  border: 1px solid #AAAAAA;
+  /* Gray border */
+}
+
+/* Alternating row colors */
+.table tr:nth-child(even) {
+  background-color: #D0E4F5;
+  /* Light blue */
+}
+
+/* Define h1 class */
+h1 {
+  color: #1C6EA4;
+  /* Dark blue */
+  font-family: 'Arial', sans-serif;
+  /* Modern sans-serif font */
+}
+
+/* Define form-container class */
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  /* White */
+  padding: 20px;
+  border: 1px solid #AAAAAA;
+  /* Gray border */
+  font-family: 'Arial', sans-serif;
+  /* Modern sans-serif font */
+}
+
+/* Define input and label classes */
+.form-container label {
+  margin-bottom: 10px;
+  color: #1C6EA4;
+  /* Dark blue */
+}
+
+.form-container input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #AAAAAA;
+  /* Gray border */
+  width: 100%;
+}
+
+/* Define submit input class */
+.form-container input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #1C6EA4;
+  /* Dark blue */
+  color: #FFFFFF;
+  /* White */
+  cursor: pointer;
+  font-size: 1em;
+  /* Match button font size to rest of form */
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #135485;
+  /* Darker blue */
+}

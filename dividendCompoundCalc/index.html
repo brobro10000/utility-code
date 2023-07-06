@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="theme" rel="stylesheet" href="./styles.css">
+  <title>Dividend Calc</title>
+</head>
+
+<body>
+  <section id="monthlyDividend" class="form-container">
+    <h1>Monthly Dividend Calculator</h1>
+    <form id="monthlyDividendForm">
+      <label for="monthlyDividendPrincipal">Monthly Dividend Starting Principal</label>
+      <input type="text" id="monthlyDividendPrincipal" name="monthlyDividendPrincipal" required><br>
+      <label for="monthlyDividendRate">Monthly Dividend Rate</label>
+      <input type="number" step=".001" id="monthlyDividendRate" name="monthlyDividendRate" required><br>
+      <label for="monthlyDividendYears">Monthly Dividend Years</label>
+      <input type="number" id="monthlyDividendYears" name="monthlyDividendYears" required><br>
+      <label for="monthlyDividendWeeklyContribution">Monthly Dividend Weekly Contribution</label>
+      <input type="number" id="monthlyDividendWeeklyContribution" name="monthlyDividendWeeklyContribution" required><br>
+      <input id='monthlyDividendButton' type="submit" value="Calculate" />
+    </form>
+    <div id='monthlyDividendTotalContainer' hidden="true">
+      <h2>
+        Monthly Dividend Results
+      </h2>
+      <div id="monthlyDividendTable"></div>
+    </div>
+  </section>
+  <section id="quarterlyDividend" class="form-container">
+    <h1>Quarterly Dividend Calculator</h1>
+    <form id="quarterlyDividendForm">
+      <label for="quarterlyDividendPrincipal">Quarterly Dividend Starting Principal</label>
+      <input type="text" id="quarterlyDividendPrincipal" name="quarterlyDividendPrincipal" required><br>
+      <label for="quarterlyDividendRate">Quarterly Dividend Rate</label>
+      <input type="number" step=".001" id="quarterlyDividendRate" name="quarterlyDividendRate" required><br>
+      <label for="quarterlyDividendYears">Quarterly Dividend Years</label>
+      <input type="number" id="quarterlyDividendYears" name="quarterlyDividendYears" required><br>
+      <label for="quarterlyDividendWeeklyContribution">Quarterly Dividend Weekly Contribution</label>
+      <input type="number" id="quarterlyDividendWeeklyContribution" name="quarterlyDividendWeeklyContribution"
+        required><br>
+      <input id='quarterlyDividendButton' type="submit" value="Calculate" />
+    </form>
+    <div id='quarterlyDividendTotalContainer' hidden="true">
+      <h2>
+        Quarterly Dividend Results
+      </h2>
+      <div id="quarterlyDividendTable"></div>
+    </div>
+  </section>
+</body>
+<script src="./constants.js" type="module"></script>
+<script src="./script.js" type="module"></script>
+
+</html>
