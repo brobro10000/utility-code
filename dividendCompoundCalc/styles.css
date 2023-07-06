@@ -33,7 +33,8 @@
 }
 
 /* Define h1 class */
-h1 {
+h1,
+h2 {
   color: #1C6EA4;
   /* Dark blue */
   font-family: 'Arial', sans-serif;

@@ -1,5 +1,7 @@
 # Dividend Calculator
 
+![Screenshot 2023-07-06 051652](https://github.com/brobro10000/utility-code/assets/82611798/a1b2745e-b44e-4fcc-9d91-a81a37e3f2d6)
+
 This project consists of an application that calculates the future value of weekly investments, taking into account an initial principal and either monthly or quarterly dividends.
 
 ## How It Works

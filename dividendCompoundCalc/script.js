@@ -1,6 +1,8 @@
 function calculateFutureValue({ principal, weeklyInvestment, annualInterestRate, compoundingPeriodsPerYear, years }) {
+
+  let yearlyInvestment = weeklyInvestment * 52.1429;
   // Convert weekly investment to the compounding period
-  let periodInvestment = weeklyInvestment * 52.1429 / compoundingPeriodsPerYear;
+  let periodInvestment = yearlyInvestment / compoundingPeriodsPerYear;
 
   // Convert annual interest rate to the compounding period
   let periodInterestRate = annualInterestRate / compoundingPeriodsPerYear;
@@ -15,6 +17,7 @@ function calculateFutureValue({ principal, weeklyInvestment, annualInterestRate,
     // Total number of payments for this year
     let totalPayments = compoundingPeriodsPerYear * t;
 
+    let totalPeriodInvestment = t === 1 ? yearlyInvestment + principal : yearlyInvestment * t;
     // Calculate future value for the series of investments
     let futureValueInvestments = periodInvestment * (Math.pow(1 + periodInterestRate, totalPayments) - 1) / periodInterestRate;
 
@@ -33,6 +36,7 @@ function calculateFutureValue({ principal, weeklyInvestment, annualInterestRate,
     // Add stats for this year to the array
     stats.push({
       year: t,
+      periodInvestment: totalPeriodInvestment,
       totalFutureValue: totalFutureValue,
       dividendsThisYear: dividendsThisYear,
       totalDividends: totalDividends,
@@ -49,7 +53,7 @@ function createTable(stats, tableDivId) {
   // Create table header
   var thead = document.createElement('thead');
   var headerRow = document.createElement('tr');
-  var headers = ['Year', 'Total Future Value', 'Dividends This Year', 'Total Dividends'];
+  var headers = ['Year', 'Total Future Value', 'Amount Invested', 'Dividends This Year', 'Total Dividends'];
   for (let header of headers) {
     var th = document.createElement('th');
     th.textContent = header;
@@ -62,7 +66,7 @@ function createTable(stats, tableDivId) {
   var tbody = document.createElement('tbody');
   for (let stat of stats) {
     var row = document.createElement('tr');
-    var data = [stat.year, stat.totalFutureValue, stat.dividendsThisYear, stat.totalDividends];
+    var data = [stat.year, stat.totalFutureValue, stat.periodInvestment, stat.dividendsThisYear, stat.totalDividends];
     for (let value of data) {
       var td = document.createElement('td');
       td.textContent = value === stat.year ? value : formatMoney(value);
