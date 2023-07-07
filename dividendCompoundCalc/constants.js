@@ -8,7 +8,6 @@ let x = document.getElementById("monthlyDividendForm");
 let y = document.getElementById("quarterlyDividendForm");
 let monthlyDividendButtonEl = document.getElementById("monthlyDividendButton")
 let quarterlyDividendButtonEl = document.getElementById("quarterlyDividendButton");
-let quarterlyDividendTotalEl = document.getElementById("quarterlyDividendTotal");
 let monthlyDividendTotalContainerEl = document.getElementById("monthlyDividendTotalContainer");
 let quarterlyDividendTotalContainerEl = document.getElementById("quarterlyDividendTotalContainer");
 
